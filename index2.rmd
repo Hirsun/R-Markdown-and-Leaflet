@@ -1,0 +1,18 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+```
+
+## My Interactive Map
+
+```{r}
+data <- data.frame(
+  Time = 1:10,
+  Value = rnorm(10)
+)
+
+fig <- plot_ly(data, x = ~Time, y = ~Value, type = 'scatter', mode = 'lines+markers', 
+               line = list(shape = 'spline'))
+
+fig
+```
