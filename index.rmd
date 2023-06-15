@@ -1,0 +1,24 @@
+---
+title: "Interactive Leaflet Map"
+output: html_document
+date: "2023-06-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+## My Interactive Map
+
+```{r}
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  setView(lng = -71.0589, lat = 42.3601, zoom = 12) %>% 
+  addMarkers(lng = -71.0589, lat = 42.3601, popup = "Boston")
+
+m  # Print the map
+```
+
+
